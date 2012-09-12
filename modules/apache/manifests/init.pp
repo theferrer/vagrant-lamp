@@ -22,7 +22,7 @@ class apache {
 
   file { "/etc/apache2/sites-available/default":
     ensure => present,
-    source => "/vagrant/config/virtualhost",
+    source => "puppet:///modules/apache/virtualhost",
     require => Package['apache2'],
   }
 
